@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="comida_proyectos.View.Ver_ProductoPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="minicopa_helado.png" 
+                   Aspect="AspectFill"
+                   Grid.Row="1"/>
+
+                <Label Text="       MINI COPA DE HELADO        " 
+                   FontSize="Title" 
+                   TextColor="Black"
+                   BackgroundColor="#BCECFB"
+                   HorizontalOptions="Center"
+                   Grid.Row="3"/>
+                <Label Text="FRUTA, UN PORCION DE HELADO  Y UNA GALLETA"
+                       TextColor="Black"
+                       HorizontalOptions="Center"
+                       Grid.Row="4"/>
+                <Label Text="$13.000"
+                       TextColor="Black"
+                       Padding="20"
+                       HorizontalOptions="EndAndExpand"
+                       Grid.Row="4"/>
+                <Button Text="AGREGAR AL CARRITO"
+                        x:Name="btnAgregarCarrPage"
+                        Grid.Row="5"
+                        BackgroundColor="#BCECFB"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

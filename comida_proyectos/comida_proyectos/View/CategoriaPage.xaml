@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="comida_proyectos.View.CategoriaPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <Image Source="sanwich.jpg" 
+                   Aspect="AspectFill"
+                   Grid.Row="1"/>
+
+                <Label Text="     ¿QUE TE GUSTARIA PEDIR?    " 
+                   FontSize="Title" 
+                   TextColor="Black"
+                   BackgroundColor="#BCECFB"
+                   HorizontalOptions="Center"
+                   Grid.Row="3"/>
+                
+                    <ListView x:Name="listaCategoria"
+                         Grid.Row="4" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <StackLayout >
+                                        <ImageButton Source="{Binding Foto_categoria}"
+                                                     Clicked="ImageButton_Clicked"/>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
